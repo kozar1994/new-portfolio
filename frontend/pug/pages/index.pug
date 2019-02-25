@@ -1,0 +1,183 @@
+extends ../layout/main
+
+block title
+  | start gulp page
+
+block content  
+  section.section.about
+    .about__left
+      svg(
+        viewbox="0 0 1000 100" 
+        preserveAspectRatio="none"
+        class="triangle triangle_fill_beigeDark about__triangles")
+        polygon(points="0,0 0,100 1000,100")
+      //- +title('Обо мне', 'about-header.png', 'about__section-title')
+      //- +title('Новый заголовок!', 'works-header.png')
+      .about__content
+        .title(style="background-image: url('image/decor/about-header.png')").about__section-title
+          | Трішки про мене
+        .about__image
+          img(src="image/content/about.jpg", alt="").about__image-style
+        
+        .title.about__mini-title
+          | Хто я
+
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias commodi esse ducimus voluptate, exercitationem magnam blanditiis doloribus eligendi magni ullam recusandae excepturi numquam quia ad illo qui eaque veniam?
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias commodi esse ducimus voluptate, exercitationem magnam blanditiis doloribus eligendi magni ullam recusandae excepturi numquam quia ad illo qui eaque veniam?
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias commodi esse ducimus voluptate, exercitationem magnam blanditiis doloribus eligendi magni ullam recusandae excepturi numquam quia ad illo qui eaque veniam?
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias commodi esse ducimus voluptate, exercitationem magnam blanditiis doloribus eligendi magni ullam recusandae excepturi numquam quia ad illo qui eaque veniam?
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias commodi esse ducimus voluptate, exercitationem magnam blanditiis doloribus eligendi magni ullam recusandae excepturi numquam quia ad illo qui eaque veniam?
+    
+    .about__right
+      svg(
+        viewbox="0 0 1000 100" 
+        preserveAspectRatio="none"
+        class="triangle triangle_fill_baigeLight about__triangles")
+        polygon(points="0,100 1000,100 1000,0")
+      .about__content
+        .title.about__mini-title
+          | Чим я буду вам корисний
+          
+        //- .skills
+        //-   ul.skills-group
+        //-     each skill in ['Frontend']
+        //-       li.skills-group__item
+        //-         .skills-group__title= skill
+        //-         ul.skills-list
+        //-           each skillItem in ['html','css','js']
+        //-             li.skills-list__item
+        //-               .skill
+        //-                 svg(viewbox="0 0 100 100" preserveAspectRatio="none").skill__circle
+        //-                   circle(cx="50" cy="50" r="35").skills__circle-under
+        //-                   circle(cx="50" cy="50" r="40").skills__circle-above
+        //-                 .skill__title= skillItem
+        
+        .skills
+          ul.skills-group
+            li.skills-group__item
+              .skills-group__title Frontend
+              ul.skills-list
+                li.skills-list__item
+                  .single-chart
+                    svg.circular-chart.orange(viewbox='0 0 36 36')
+                      path.circle-bg(d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      path.circle(stroke-dasharray='87, 100', d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      //text.percentage(x='18', y='20.35') 
+                      img.icon-skill(src="image/icons/icons8-html-5.svg", alt="html 5")
+                li.skills-list__item
+                  .single-chart
+                    svg.circular-chart.orange(viewbox='0 0 36 36')
+                      path.circle-bg(d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      path.circle(stroke-dasharray='90, 100', d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      text.percentage(x='18', y='20.35')
+                      img.icon-skill(src="image/icons/icons8-css3.svg", alt="css 3")
+                li.skills-list__item
+                  .single-chart
+                    svg.circular-chart.orange(viewbox='0 0 36 36')
+                      path.circle-bg(d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      path.circle(stroke-dasharray='78, 100', d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      text.percentage(x='18', y='20.35')
+                      img.icon-skill(src="image/icons/icons8-javascript.svg", alt="javascript")
+            li.skills-group__item
+              .skills-group__title Backend
+              ul.skills-list
+                li.skills-list__item
+                  .single-chart
+                    svg.circular-chart.orange(viewbox='0 0 36 36')
+                      path.circle-bg(d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      path.circle(stroke-dasharray='55, 100', d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      //text.percentage(x='18', y='20.35') 
+                      img.icon-skill(src="image/icons/icons8-nodejs.svg", alt="node.js")
+                li.skills-list__item
+                  .single-chart
+                    svg.circular-chart.orange(viewbox='0 0 36 36')
+                      path.circle-bg(d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      path.circle(stroke-dasharray='27, 100', d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      text.percentage(x='18', y='20.35')
+                      img.icon-skill(src="image/icons/icons8-mongodb.svg", alt="mongodb")
+                li.skills-list__item
+                  .single-chart
+                    svg.circular-chart.orange(viewbox='0 0 36 36')
+                      path.circle-bg(d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      path.circle(stroke-dasharray='36, 100', d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      text.percentage(x='18', y='20.35')
+                      img.icon-skill(src="image/icons/icons8-mysql-logo-filled.svg", alt="sql")
+            li.skills-group__item
+              .skills-group__title WorkFlow
+              ul.skills-list
+                li.skills-list__item
+                  .single-chart
+                    svg.circular-chart.orange(viewbox='0 0 36 36')
+                      path.circle-bg(d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      path.circle(stroke-dasharray='80, 100', d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      //text.percentage(x='18', y='20.35') 
+                      img.icon-skill(src="image/icons/icons8-git.svg", alt="git")
+                li.skills-list__item
+                  .single-chart
+                    svg.circular-chart.orange(viewbox='0 0 36 36')
+                      path.circle-bg(d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      path.circle(stroke-dasharray='70, 100', d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      text.percentage(x='18', y='20.35')
+                      img.icon-skill(src="image/icons/icons8-npm.svg", alt="npm")
+                li.skills-list__item
+                  .single-chart
+                    svg.circular-chart.orange(viewbox='0 0 36 36')
+                      path.circle-bg(d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      path.circle(stroke-dasharray='55, 100', d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      text.percentage(x='18', y='20.35')
+                      img.icon-skill(src="image/icons/icons8-adobe-photoshop.svg", alt="photoshop")
+                li.skills-list__item
+                  .single-chart
+                    svg.circular-chart.orange(viewbox='0 0 36 36')
+                      path.circle-bg(d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      path.circle(stroke-dasharray='45, 100', d='M18 2.0845\
+                      a 15.9155 15.9155 0 0 1 0 31.831\
+                      a 15.9155 15.9155 0 0 1 0 -31.831')
+                      text.percentage(x='18', y='20.35')
+                      img.icon-skill(src="image/icons/icons8-adobe-illustrator.svg", alt="illustrator")
+                     
+
+
+  section.section.map
+    iframe( src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82352.48246575925!2d23.942196022842456!3d49.83277867720385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7c09109a57%3A0x4223c517012378e2!2z0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1551011805478" 
+          width="100%" 
+          height="1000" 
+          frameborder="0" style="border:0" allowfullscreen)
